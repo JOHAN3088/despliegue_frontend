@@ -1,0 +1,64 @@
+<div class="container">
+
+    <div class="row">
+    
+        <div class="col s5">
+    
+        <div class="card">
+    
+         <div class="card-content">
+    
+         <form #empleadoForm="ngForm" (ngSubmit)="agregarEmpleado(empleadoForm)">
+    
+         <div class="row">
+    
+            <div class="input-field col-s12">
+    
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.nombre" placeholder="Ingrese el nombre">
+           </div>
+    
+        <div class="input-field col-s12">
+    
+                <input type="number" name="documento" #documento="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.documento" placeholder="Ingrese el documento">
+    
+        </div>
+    
+         <div class="input-field col-s12">
+    
+                <input type="text" name="email" #email="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.email" placeholder="Ingrese el correo electronico">
+    
+        </div>
+    
+        <div class="input-field col-s12">
+    
+                <input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.telefono" placeholder="Ingrese el numero telefonico">
+    
+        </div>
+        <div class="input-field col-s12">
+    
+                <input type="text" name="rol" #rol="ngModel" [(ngModel)]="empleadoService.selectedEmpleado.rol" placeholder="Ingrese el trabajo que desempeña">
+    
+        </div>
+    
+    <div class="card-action">
+    <div class="input-field col s12">
+    <button class="btn" (click)="resetForm(empleadoForm)">Limpiar </button>
+   <button class="btn left">Guardar </button>
+    </div>
+  </div>
+ </div>
+</form>
+</div>
+</div>
+    
+</div>
+
+<div class="col s7">
+
+</div>
+
+</div>
+
+</div>
+
+    
